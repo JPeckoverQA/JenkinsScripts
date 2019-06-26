@@ -28,7 +28,16 @@ echo "Starting Jenkins"
 sudo systemctl start jenkins
 echo "Jenkins started!"
 
-sudo su - jenkins -c "echo home/jenkins/.jenkins/secrets/initialAdminPassword"
+#obtain initial password
+
+#wait until password is produced
+
+#curl -L localhost:8080
+
+#until ls /home/jenkins/.jenkins/secrets; do
+#	echo "waiting for initial password"
+#done
+sudo cat /home/jenkins/.jenkins/secrets/initialAdminPassword
 
 #allow jenkins to run on system startup
 sudo systemctl enable jenkins
